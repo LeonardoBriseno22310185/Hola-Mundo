@@ -1,0 +1,41 @@
+@startuml pow
+
+
+class Pow
+class Juego
+class JuegoPelota
+class Pelota
+class Comida
+class Platillo
+class Bebidas
+class Transporte
+class Carro
+class Patineta
+class Jugo
+class Refresco
+class Camaron
+class Zanahoria
+class Pan
+
+
+Pow o--Juego
+Juego <|-- JuegoPelota
+JuegoPelota *-- Pelota
+Pow *-- Comida
+Comida <|--Platillo
+Comida <|--Bebidas
+Pow o-- Transporte
+Transporte <|-- Carro
+Transporte <|-- Patineta
+Bebidas <|-- Jugo
+Bebidas <|-- Refresco
+Platillo <|-- Zanahoria
+Platillo <|-- Camaron
+Platillo <|-- Pan
+
+
+
+
+
+
+@enduml
