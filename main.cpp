@@ -1,6 +1,9 @@
 #include<iostream>
-#include <Alimento.hpp>
+#include<Alimento.hpp>
 #include<Mascota.hpp>
+#include<Dibujo.hpp>
+#include<Animacion.hpp>
+#include<list>
 
 using namespace std;
 
@@ -20,6 +23,22 @@ int main(int argc, char const *argv[])
     <<firulais.LeerVida()
     <<endl;
 
+    Dibujo dibujo("./assets/Dolphin.txt");
+    dibujo.Dibujar();
+
+    Dibujo dibujo1("./assets/Fox.txt");
+    dibujo.Dibujar();
+    
+    list<Dibujo> dibujos;
+    dibujos.push_back(dibujo);
+    dibujos.push_back(dibujo1);
+    
+    Animacion animacion(dibujos);
+    animacion.Reproducir();
+
+    
+    
+    
     return 0;
 
 
